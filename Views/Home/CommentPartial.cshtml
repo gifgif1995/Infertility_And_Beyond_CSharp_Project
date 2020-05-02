@@ -1,0 +1,8 @@
+@using infertilityAndBeyondProject.Models
+@model Comment
+
+  <textarea asp-for="CommentBody" rows="2" class="form-control"></textarea>
+  <span style="color:red;font-size:small" asp-validation-for="CommentBody"></span>
+  <div class="text-right mt-3">
+    <button type="submit" class="btn btn-dark btn-sm">SUBMIT COMMENT</button>
+  </div>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;428;508&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+<style>
+    .bodyHeader {
+    background-color: teal;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    }
+    .card2{
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    color: white;
+    }
+</style>
+</head>
+<body>
+    @using infertilityAndBeyondProject.Models
+    @model Message
+
+    <partial name="NavPartial"/>
+    <div class="container">
+        <h2 class="bodyHeader">Welcome to the Blog @ViewBag.LoggedUserName</h2>
+        <hr>
+          <!-- form -->
+        <div class="bg-light rounded p-3 shadow mb-3">
+            <h1 class="h5 font-weight-bold mb-3" style="font-family: 'Oswald', sans-serif; list-style-type: none;">POST A MESSAGE:</h1>
+            <form asp-action="PostMessage" asp-controller="Home" method="POST">
+            <textarea asp-for="MessageBody" rows="3" class="form-control"></textarea>
+            <span style="color:red;font-size:small" asp-validation-for="MessageBody"></span>
+            <div class="text-right mt-3">
+                <button type="submit" class="btn btn-dark">SUBMIT MESSAGE</button>
+            </div>
+            </form>
+        </div>
+      <!-- form -->
+    
+
+      <!-- messages -->
+        <div class="shadow p-4 card2 text-center" style="border-radius: 10px; margin-bottom: 15px">
+            <h1 class="h5 font-weight-bold mb-0" style="font-family: 'Oswald', sans-serif; list-style-type: none;">POSTED MESSAGES:</h1>
+        </div>
+
+
+        @foreach (var message in ViewBag.AllMessages) {
+        <div class="shadow p-4 card2 mt-3" style="border-radius: 2em 6em;">
+            <div class="px-3 mb-3" style="list-style-type: none; font-family: 'Oswald', sans-serif;">
+                <p class="mt-2 mb-2 font-weight-bold">@message.User.FirstName @message.User.LastName - @message.created_at.ToString("MMMM dd, yyyy")</p>                
+                @if (message.UserId == ViewBag.LoggedUser.UserID) {
+                <a role="button" style="float: right;" class="btn btn-danger btn-sm text-light mb-3">DELETE</a>
+                } 
+                <p class="left-border text-justify pl-3" style="font-family: 'Dosis', sans-serif;"><q>@message.MessageBody</q></p>
+                <form asp-action="PostComment" asp-route-MessageId="@message.MessageId" asp-controller="Home" method="POST" class="pl-4">
+              <partial name="CommentPartial"/>
+            </form>
+            </div>
+        </div>
+        <div style="border-radius: 6em 2em;" class="shadow p-4 m-4 card2">
+        @foreach (var comment in ViewBag.AllComments) {                       
+                if (comment.MessageId == message.MessageId) {
+                  <div class="px-3 mb-3 text-right">
+                    <p class="pl-3 mb-0" style="font-family: 'Oswald', sans-serif;">@comment.User.FirstName @comment.User.LastName - @comment.created_at.ToString("MMM dd, yyyy")</p>
+                    <p class="text-right pl-3" style="font-family: 'Dosis', sans-serif;">@comment.CommentBody</p>
+                  </div>
+                }
+            }
+        </div>
+        }
+    <div>
+
+ 
+                    
+    </div>
+    </div>
+</body>
+</html>

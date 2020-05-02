@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;428;508&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+<style>
+    .bodyHeader {
+    background-color: teal;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+}
+    .card2{
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    color: white;
+    }
+</style>
+</head>
+<body>
+    @using infertilityAndBeyondProject.Models
+
+
+    <partial name="NavPartial"/>
+    <div class="container">
+    <h2 class="bodyHeader">Discounts</h2>
+    <hr>
+        <div class="shadow p-4 card" style="border-radius: 10px">
+            <h2 style="font-family: 'Oswald', sans-serif;" class="text-center">We know that infertility treatments can be expensive, So here is a list to some websites that may be able to help! </h2>
+        </div>
+        <div class="shadow p-4 card2 m-2" style="border-radius: 10px">
+            <ul>
+                <li style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px"><h4>Grants</h4></li>
+                <hr>
+                <ul style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px">
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="shadow p-4 card2 m-2" style="border-radius: 10px">
+            <ul>
+                <li style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px"><h4>Credit Cards</h4></li>
+                <hr>
+                <ul style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px">
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="shadow p-4 card2 m-2" style="border-radius: 10px">
+            <ul>
+                <li style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px"><h4>Loans</h4></li>
+                <hr>
+                <ul style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px">
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                    <li>&emsp;List of hyperlinks to websites</li>
+                </ul>
+            </ul>
+        </div>
+
+        </div>
+               
+    </div>
+</body>
+</html>

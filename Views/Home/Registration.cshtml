@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Reg</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <style>
+    .loginpage {
+
+    padding: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+    }
+            .card2{
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    color: white;
+    border-radius: 10px
+    
+    }
+</style>
+</head>
+<body>
+    @using infertilityAndBeyondProject.Models
+    @model LoginRegWrapper
+    <nav class="navbar navbar-light">
+        <img class="mx-auto d-block img-responsive" style="width: 400px; background: transparent" src="img/logo.png" alt="logo">
+    </nav>
+    <div class="container-fluid bg-info loginpage">
+        <div class="row">
+            <div style="width: 450px;" class="shadow p-4 m-3 mx-auto card2">
+                <form asp-action="CreateNewUser" method="post">
+                    <h1 class="text-center" >Register</h1>
+                    <div class="form-group">
+                        <label for="">First Name</label>
+                        <input placeholder="First Name" type="text" asp-for="User.FirstName" class="form-control">
+                        <span class="text-danger" asp-validation-for="User.FirstName"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Last Name</label>
+                        <input placeholder="Last Name" type="text" asp-for="User.LastName" class="form-control">
+                        <span class="text-danger" asp-validation-for="User.LastName"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input placeholder="Email Address" asp-for="User.Email" class="form-control">
+                        <span class="text-danger" asp-validation-for="User.Email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input placeholder="Password" asp-for="User.Password" class="form-control">
+                        <span class="text-danger" asp-validation-for="User.Password"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Confirm Password</label>
+                        <input placeholder="Confirm Password" asp-for="User.ConfirmPassword" class="form-control">
+                        <span class="text-danger" asp-validation-for="User.ConfirmPassword"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-success">Sign Up Now</button>
+                        </div>
+                        <div class="col">
+                            <a type="button" href="#"><img style="width: 200px;" src="~/img/fb.png" alt="facebook"></a>
+                            @* We will need to eventually add a facebook login api here for functionality *@
+                        </div>
+                    </div>
+                </form>
+                <div>
+                <p class="p-4 font-weight-light" style="float: right;">Already Registered? Click <a href="/">here</a> to sign in! </p>
+
+            </div>
+            </div>
+            </div>
+    </div>
+</body>
+</html>

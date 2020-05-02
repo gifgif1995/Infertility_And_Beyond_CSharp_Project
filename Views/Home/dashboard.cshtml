@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;428;508&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <style>
+    .bodyHeader {
+    background-color: teal;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 50px;
+    }
+        .card2{
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    color: white;
+    border-radius: 10px
+    
+    }
+    </style>
+</head>
+<body>
+    @using infertilityAndBeyondProject.Models
+    @model User
+
+    <partial name="NavPartialDashboard"/>
+    <div class="container">
+    <h2 class="bodyHeader">Welcome to Infertility & Beyond @ViewBag.User.FirstName!</h2>
+    <hr>
+    
+        <div class="shadow p-4 text-center card2">
+            <h2 style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px">This is a website where you can come for all of your resources needed to find out about male Infertility. Here you can blog about the struggles you and your partner are going through or you can blog about the success you have had! Talk to others who might be going through the same thing you are going through or even get some free advice from doctors. You can purchase products that have helped others overcome their infertility and even research clinics that may be out there to help you overcome your struggles.</h2>
+            
+        </div>
+        <div class="shadow p-4 text-center card2 mt-2">
+            <h2 style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px">We are happy that you joined us and we wish you and your partner the best of luck during your beautiful journey to start or grow your family!</h2>
+        </div>
+               
+    </div>
+</body>
+</html>

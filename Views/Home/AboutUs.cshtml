@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;428;508&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+<style>
+    .bodyHeader {
+    background-color: teal;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+}
+    .card2{
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    color: white;
+    border-radius: 10px
+    }
+</style>
+</head>
+<body>
+    @using infertilityAndBeyondProject.Models
+
+
+    <partial name="NavPartial"/>
+    <div class="container">
+    <h2 class="bodyHeader">About Us!</h2>
+    <hr>
+    
+        <div class="shadow p-4 text-center card2" style="list-style-type: none; font-family: 'Dosis', sans-serif; margin-top: 20px">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non enim praesent. Duis tristique sollicitudin nibh sit. Volutpat odio facilisis mauris sit. Purus sit amet volutpat consequat. Commodo sed egestas egestas fringilla phasellus faucibus. Pellentesque habitant morbi tristique senectus. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Nibh tellus molestie nunc non blandit massa. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis.</h3>
+        </div>
+               
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+        <link rel="stylesheet" href="~/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+        <script>
+          function openNav() {
+            document.getElementById("mobile__menu").style.width = "100%";
+          }
+
+          function closeNav() {
+            document.getElementById("mobile__menu").style.width = "0";
+          }
+        </script>
+        <header>
+            <a class="logo" href="dashboard"><img src="img/logo.png" alt="logo"></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="Blog">Blog</a></li>
+                    <li><a href="Discounts">Discounts</a></li>
+                    <li><a href="Products">Products</a></li>
+                    <li><a href="Doctors">Doctors</a></li>
+                    <li><a href="AboutUs">About Us</a></li>
+                    <li><a href="Logout">Logout</a></li>
+                </ul>
+                <ul>
+                    
+                </ul>
+            </nav>
+
+            <p onclick="openNav()" class="menu cta">Menu</p>
+        </header>
+        <div id="mobile__menu" class="overlay">
+            <a class="close" onclick="closeNav()">&times;</a>
+            <div class="overlay__content">
+                    <li><a href="Blog">Blog</a></li>
+                    <li><a href="Discounts">Discounts</a></li>
+                    <li><a href="Products">Products</a></li>
+                    <li><a href="Doctors">Doctors</a></li>
+                    <li><a href="AboutUs">About Us</a></li>
+                    <li><a href="Logout">Logout</a></li>
+            </div>
+        </div>
+        @* <script type="text/javascript" src="mobile.js"></script> *@

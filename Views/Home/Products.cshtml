@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+        <link rel="stylesheet" href="~/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="~/js/myscript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;428;508&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+<style>
+    .bodyHeader {
+    background-color: teal;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+}
+    .card2{
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    color: white;
+    }
+ul{
+
+    font-family: 'Dosis', sans-serif; 
+    margin-top: 20px"
+}
+</style>
+</head>
+<body>
+    @using infertilityAndBeyondProject.Models
+    <partial name="NavPartial"/>
+    <div class="container">
+    <h2 class="bodyHeader">Products that might help you out!</h2>
+    <hr>
+        <div class="shadow p-4 card2" style="border-radius: 10px">
+            <div class="row">
+                <li type="button" class="btn btn-info m-4 col" id="btntog" style="font-family: 'Oswald', sans-serif;"><h4 >Books</h4></li>
+                <li type="button" class="btn btn-info m-4 col" id="btntog2" style="font-family: 'Oswald', sans-serif;"><h4>Supplements</h4></li>
+                <li type="button" class="btn btn-info m-4 col" id="btntog3" style="font-family: 'Oswald', sans-serif;"><h4>Other Things</h4></li>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <ul id="tog" style="list-style-type: none; display:none; border-radius: 10px"  class="card2 shadow ml-4 mt-2 p-4">
+                    <h3>Amazon or other affilliate link for books</h3>
+                    <h3>Amazon or other affilliate link for books</h3>
+                    <h3>Amazon or other affilliate link for books</h3>
+                    <h3>Amazon or other affilliate link for books</h3>
+                </ul>
+            </div>
+            <div class="row">
+                <ul id="tog2" style="list-style-type: none; display:none; border-radius: 10px"  class=" card2 shadow ml-4 mt-2 p-4">
+                    <h3> Amazon or other affilliate link for Supplements</h3>
+                    <h3> Amazon or other affilliate link for Supplements</h3>
+                    <h3> Amazon or other affilliate link for Supplements</h3>
+                    <h3> Amazon or other affilliate link for Supplements</h3>
+                </ul>
+            </div>
+            <div class="row" >
+                <ul id="tog3" style="list-style-type: none; display:none; border-radius: 10px"  class=" card2 shadow ml-4 mt-2 p-4" >
+                    <h3>A Amazon or other affilliate link for Other Things</h3>
+                    <h3>A Amazon or other affilliate link for Other Things</h3>
+                    <h3>A Amazon or other affilliate link for Other Things</h3>
+                    <h3>A Amazon or other affilliate link for Other Things</h3>
+                </ul>
+            </div>
+        </div>
+            
+  
+        </div>
+
+
+</body>
+</html>
